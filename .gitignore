@@ -9,7 +9,7 @@ creditcardfraud.zip
 *.csv
 
 # Model artifacts (optional — remove this line if you want to version the model)
-*.joblib
+#*.joblib
 
 # Python
 __pycache__/
