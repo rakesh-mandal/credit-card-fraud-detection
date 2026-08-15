@@ -11,7 +11,7 @@ This project builds and compares classification models to flag fraudulent transa
 ## Pipeline
 
 1. **EDA** — class distribution, transaction amount/time distributions, correlation analysis
-2. **Preprocessing** — `RobustScaler` on `Amount`, `StandardScaler` on `Time`, fit on train only
+2. Preprocessing — `RobustScaler` on `Amount` and `StandardScaler` on `Time`, applied via a `ColumnTransformer` as the first step inside each model pipeline (not as a separate manual step), so scaling is automatically fit on training folds only
 3. **Model comparison** — Logistic Regression, Random Forest, and XGBoost, evaluated with 5-fold stratified cross-validation on recall, precision, F1, and PR-AUC
 4. **Imbalance handling** — SMOTE oversampling applied within CV folds (Logistic Regression); class weighting / `scale_pos_weight` for Random Forest and XGBoost
 5. **Threshold tuning** — optimal decision threshold selected from out-of-fold predicted probabilities (F1-maximizing), not from the test set
