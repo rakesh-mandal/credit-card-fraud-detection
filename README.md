@@ -24,10 +24,10 @@ Final performance on the held-out test set, at the F1-optimal threshold (0.93) t
 
 | Metric    | Score  |
 |-----------|--------|
-| Precision | ~0.92  |
-| Recall    | ~0.80  |
-| PR-AUC    | 0.8631 |
-| ROC-AUC   | 0.9685 |
+| Precision | 0.9186 |
+| Recall    | 0.8061 |
+| PR-AUC    | 0.8617 |
+| ROC-AUC   | 0.9679 |
 
 Because fraud is rare, **PR-AUC and recall matter more than accuracy** — a model that predicts "genuine" for everything would still be ~99.8% accurate while catching zero fraud. At this threshold, the model catches ~80% of fraudulent transactions while keeping false alarms low (~92% precision). ROC-AUC looks even stronger, but on this imbalanced a dataset it's partly inflated by the sheer volume of true negatives — PR-AUC is the more honest read on performance.
 
