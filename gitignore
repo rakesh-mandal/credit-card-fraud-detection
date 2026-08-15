@@ -1,0 +1,22 @@
+# Credentials — never commit these
+kaggle.json
+.kaggle/
+*.env
+
+# Data (large / downloaded via script, don't bloat the repo)
+creditcard.csv
+creditcardfraud.zip
+*.csv
+
+# Model artifacts (optional — remove this line if you want to version the model)
+*.joblib
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS
+.DS_Store
